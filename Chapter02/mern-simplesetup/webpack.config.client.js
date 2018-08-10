@@ -18,18 +18,13 @@ const config = {
     },
     module: {
         rules: [
-          {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            use: [
-              {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['react']
-                }
-              }
-            ],
-          }
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: [
+                    'babel-loader'
+                ]
+            }
         ]
     },  plugins: [
           new webpack.HotModuleReplacementPlugin(),
